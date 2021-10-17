@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="768805925e9944fcad660bbb9fdcf421" Name="Diagram1">
+        <EntityTypeShape EntityType="ArcadeModel.Basis" Width="1.5" PointX="11" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.Event" Width="1.5" PointX="8.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.InPut" Width="1.5" PointX="14" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.OutPut" Width="1.5" PointX="11" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.EstateType" Width="1.5" PointX="3.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.Job" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.MaritalStatu" Width="1.5" PointX="3.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.MilitaryStatu" Width="1.5" PointX="3.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.PaymentType" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.RoleType" Width="1.5" PointX="9" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.USER" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.Check" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.Constraction" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.CoordinatingCouncil" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.Estate" Width="1.5" PointX="6" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.LandLord" Width="1.5" PointX="8.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.Lease" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.PersonalInfo" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.PurchaseLetter" Width="1.5" PointX="13.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.RentPayment" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArcadeModel.Role" Width="1.5" PointX="11.25" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="ArcadeModel.FK_Basis_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_Entrance_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_OutPut_Event" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_Entrance_Estate" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_Estate_EstateType1" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_Lease_Job" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_personalInformation_Job" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_PersonInfo_MaritalStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_PersonInfo_MilitaryStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_Role_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_Lease_CoordinatingCouncil" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_PurchaseLetter_CoordinatingCouncil" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_LandLord_Estate" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_LandLord_personalInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_Lease_LandLord" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_PurchaseLetter_LandLord" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_Lease_PersonalInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_PurchaseLetter_PersonalInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="ArcadeModel.FK_Role_PersonInfo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B49A33F-46CE-46CA-A354-C0C12DF59F99}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessLogicLayer</RootNamespace>
+    <AssemblyName>BusinessLogicLayer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessBLL.cs" />
+    <Compile Include="AccessDBBLL.cs" />
+    <Compile Include="ConfirmationBLL.cs" />
+    <Compile Include="CoordinatingCouncilBLL.cs" />
+    <Compile Include="EventBLL.cs" />
+    <Compile Include="EstateReportBLL.cs" />
+    <Compile Include="OutputBLL.cs" />
+    <Compile Include="EstateBLL.cs" />
+    <Compile Include="JobBLL.cs" />
+    <Compile Include="LandLordBLL.cs" />
+    <Compile Include="LeaseBLL.cs" />
+    <Compile Include="LetterBLL.cs" />
+    <Compile Include="LetterPlaceBLL.cs" />
+    <Compile Include="InsuranceStatusBLL.cs" />
+    <Compile Include="EstateTypeBLL.cs" />
+    <Compile Include="CheckBLL.cs" />
+    <Compile Include="PersonalInfoBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersonalRoleBLL.cs" />
+    <Compile Include="PostBLL.cs" />
+    <Compile Include="PurchaseLetterBLL.cs" />
+    <Compile Include="RoleBLL.cs" />
+    <Compile Include="RoleTypeBLL.cs" />
+    <Compile Include="MembershipBLL.cs" />
+    <Compile Include="InputBLL.cs" />
+    <Compile Include="MilitaryStatusBLL.cs" />
+    <Compile Include="MaritalStatusBLL.cs" />
+    <Compile Include="InspectionTypeBLL.cs" />
+    <Compile Include="HabitationBLL.cs" />
+    <Compile Include="DegreeBLL.cs" />
+    <Compile Include="DatabaseBLL.cs">
+    </Compile>
+    <Compile Include="SecurityBLL.cs" />
+    <Compile Include="Encryptor.cs" />
+    <Compile Include="ExceptionHandlerBLL.cs" />
+    <Compile Include="KeyboardControler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerBLL.cs" />
+    <Compile Include="SettingBLL.cs" />
+    <Compile Include="UserBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjectLayer\BusinessObjectLayer.csproj">
+      <Project>{093ab4df-87b0-4498-b048-7e21e35881a1}</Project>
+      <Name>BusinessObjectLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComplexDataType\ComplexDataType.csproj">
+      <Project>{8248f680-4e16-4296-9ce6-04bfceb925af}</Project>
+      <Name>ComplexDataType</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLibrary\DataAccessLayer.csproj">
+      <Project>{55758e78-ccbf-49cf-b93c-8f725c8a9c73}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessObjectLayer\DataObjectLayer.csproj">
+      <Project>{3155953b-0c2a-4b6e-8346-827c2ec0fafd}</Project>
+      <Name>DataObjectLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataConvertor\DataConvertor.csproj">
+      <Project>{449678dd-ad6e-421a-8ed8-9a1d6e2650b8}</Project>
+      <Name>DataConvertor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

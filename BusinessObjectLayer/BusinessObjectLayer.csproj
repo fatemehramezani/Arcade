@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{093AB4DF-87B0-4498-B048-7E21E35881A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessObjectLayer</RootNamespace>
+    <AssemblyName>BusinessObjectLayer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessBOL.cs" />
+    <Compile Include="AccessDBBOL.cs" />
+    <Compile Include="CheckBOL.cs" />
+    <Compile Include="ConfirmationBOL.cs" />
+    <Compile Include="CoordinatingCouncilBOL.cs" />
+    <Compile Include="EventBOL.cs" />
+    <Compile Include="EstateReportBOL.cs" />
+    <Compile Include="OutputBOL.cs" />
+    <Compile Include="LandLordBOL.cs" />
+    <Compile Include="LeaseBOL.cs" />
+    <Compile Include="PersonalRoleBOL.cs" />
+    <Compile Include="EstateBOL.cs" />
+    <Compile Include="InputBOL.cs" />
+    <Compile Include="InspectionTypeBOL.cs" />
+    <Compile Include="InsuranceStatusBOL.cs" />
+    <Compile Include="JobBOL.cs" />
+    <Compile Include="EstateTypeBOL.cs" />
+    <Compile Include="LetterBOL.cs" />
+    <Compile Include="LetterPlaceBOL.cs" />
+    <Compile Include="MembershipBOL.cs" />
+    <Compile Include="PersonalInfoBOL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PostBOL.cs" />
+    <Compile Include="PurchaseLetterBOL.cs" />
+    <Compile Include="RoleBOL.cs" />
+    <Compile Include="RoleTypeBOL.cs" />
+    <Compile Include="MilitaryStatusBOL.cs" />
+    <Compile Include="MaritalStatusBOL.cs" />
+    <Compile Include="HabitationBOL.cs" />
+    <Compile Include="DegreeBOL.cs" />
+    <Compile Include="SettingBOL.cs" />
+    <Compile Include="SecurityBOL.cs" />
+    <Compile Include="ExceptionHandlerBOL.cs" />
+    <Compile Include="ListItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserBOL.cs" />
+    <Compile Include="UserProfile.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

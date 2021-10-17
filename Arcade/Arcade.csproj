@@ -1,0 +1,1204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1E96E2A-B399-485D-A8C4-D102CF42162A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserInterface</RootNamespace>
+    <AssemblyName>ArcadeManagment</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <PublishUrl>E:\faranik project\last Arcade\final\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>fa</TargetCulture>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>D:\Dr.Ramezani\Prerequiest\dotnetfx40</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2B56A7A795C4AD54C32AD028115C6D7D0EA0FA2F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>UserInterfaceLayer_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AccessUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessUI.Designer.cs">
+      <DependentUpon>AccessUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordUI.designer.cs">
+      <DependentUpon>ChangePasswordUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackupUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupUI.Designer.cs">
+      <DependentUpon>BackupUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionStringUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectionStringUI.designer.cs">
+      <DependentUpon>ConnectionStringUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCheckUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCheckUI.designer.cs">
+      <DependentUpon>EditCheckUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEventUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEventUI.designer.cs">
+      <DependentUpon>EditEventUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditInput.designer.cs">
+      <DependentUpon>EditInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditLease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditLease.designer.cs">
+      <DependentUpon>EditLease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOutput.designer.cs">
+      <DependentUpon>EditOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPurchaseLetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPurchaseLetter.designer.cs">
+      <DependentUpon>EditPurchaseLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOV\CoordinatingCouncilLOV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOV\CoordinatingCouncilLOV.designer.cs">
+      <DependentUpon>CoordinatingCouncilLOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOV\CheckLOV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOV\CheckLOV.designer.cs">
+      <DependentUpon>CheckLOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOV\LandLordLOV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOV\LandLordLOV.designer.cs">
+      <DependentUpon>LandLordLOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOV\PurchaseLetterLOV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOV\PurchaseLetterLOV.designer.cs">
+      <DependentUpon>PurchaseLetterLOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOV\PersonalInfoLOV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOV\PersonalInfoLOV.designer.cs">
+      <DependentUpon>PersonalInfoLOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditLandLord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditLandLord.designer.cs">
+      <DependentUpon>EditLandLord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowBasisUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowBasisUI.designer.cs">
+      <DependentUpon>ShowBasisUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowEventUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowEventUI.designer.cs">
+      <DependentUpon>ShowEventUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowInputUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowInputUI.Designer.cs">
+      <DependentUpon>ShowInputUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowLandLordUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowLandLordUI.Designer.cs">
+      <DependentUpon>ShowLandLordUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPersonalRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPersonalRole.designer.cs">
+      <DependentUpon>EditPersonalRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowLeaseUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowLeaseUI.designer.cs">
+      <DependentUpon>ShowLeaseUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowEstateReportUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowEstateReportUI.Designer.cs">
+      <DependentUpon>ShowEstateReportUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowOutputUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowOutputUI.Designer.cs">
+      <DependentUpon>ShowOutputUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowPersonalInfoUI.Designer.cs">
+      <DependentUpon>ShowPersonalInfoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowPersonalRoleUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowPersonalRoleUI.designer.cs">
+      <DependentUpon>ShowPersonalRoleUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCoordinatingCouncil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCoordinatingCouncil.designer.cs">
+      <DependentUpon>EditCoordinatingCouncil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEstateUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEstateUI.designer.cs">
+      <DependentUpon>EditEstateUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditJobUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditJobUI.designer.cs">
+      <DependentUpon>EditJobUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMaritalStatusUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMaritalStatusUI.designer.cs">
+      <DependentUpon>EditMaritalStatusUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEstateTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEstateTypeUI.Designer.cs">
+      <DependentUpon>EditEstateTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPersonalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPersonalInfo.designer.cs">
+      <DependentUpon>EditPersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRoleTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRoleTypeUI.Designer.cs">
+      <DependentUpon>EditRoleTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMilitaryStatusUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMilitaryStatusUI.Designer.cs">
+      <DependentUpon>EditMilitaryStatusUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSettingUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSettingUI.designer.cs">
+      <DependentUpon>EditSettingUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\CustomGridViewLocalizationProvider.cs" />
+    <Compile Include="MainUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUI.Designer.cs">
+      <DependentUpon>MainUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="PersianCulture.cs" />
+    <Compile Include="RestoreBackupUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestoreBackupUI.Designer.cs">
+      <DependentUpon>RestoreBackupUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowCoordinatingCouncilUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowCoordinatingCouncilUI.Designer.cs">
+      <DependentUpon>ShowCoordinatingCouncilUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowEstateUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowEstateUI.Designer.cs">
+      <DependentUpon>ShowEstateUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowJobUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowJobUI.designer.cs">
+      <DependentUpon>ShowJobUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowMaritalStatusUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowMaritalStatusUI.Designer.cs">
+      <DependentUpon>ShowMaritalStatusUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowEstateTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowEstateTypeUI.Designer.cs">
+      <DependentUpon>ShowEstateTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowCheckUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowCheckUI.Designer.cs">
+      <DependentUpon>ShowCheckUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowPersonalInfoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowPurchaseLetterUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowPurchaseLetterUI.designer.cs">
+      <DependentUpon>ShowPurchaseLetterUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowRoleTypeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRoleTypeUI.Designer.cs">
+      <DependentUpon>ShowRoleTypeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowMilitaryStatusUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowMilitaryStatusUI.Designer.cs">
+      <DependentUpon>ShowMilitaryStatusUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowSettingUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowSettingUI.designer.cs">
+      <DependentUpon>ShowSettingUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditUserUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUserUI.designer.cs">
+      <DependentUpon>EditUserUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionHandlerUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionHandlerUI.designer.cs">
+      <DependentUpon>ExceptionHandlerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccessUI.resx">
+      <DependentUpon>AccessUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackupUI.resx">
+      <DependentUpon>BackupUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordUI.resx">
+      <DependentUpon>ChangePasswordUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionStringUI.resx">
+      <DependentUpon>ConnectionStringUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCheckUI.resx">
+      <DependentUpon>EditCheckUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEventUI.resx">
+      <DependentUpon>EditEventUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditInput.resx">
+      <DependentUpon>EditInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditLease.resx">
+      <DependentUpon>EditLease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOutput.resx">
+      <DependentUpon>EditOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPurchaseLetter.resx">
+      <DependentUpon>EditPurchaseLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOV\CoordinatingCouncilLOV.resx">
+      <DependentUpon>CoordinatingCouncilLOV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOV\CheckLOV.resx">
+      <DependentUpon>CheckLOV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOV\LandLordLOV.resx">
+      <DependentUpon>LandLordLOV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOV\PurchaseLetterLOV.resx">
+      <DependentUpon>PurchaseLetterLOV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOV\PersonalInfoLOV.resx">
+      <DependentUpon>PersonalInfoLOV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditLandLord.resx">
+      <DependentUpon>EditLandLord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowBasisUI.resx">
+      <DependentUpon>ShowBasisUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowEventUI.resx">
+      <DependentUpon>ShowEventUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowInputUI.resx">
+      <DependentUpon>ShowInputUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowLandLordUI.resx">
+      <DependentUpon>ShowLandLordUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPersonalRole.resx">
+      <DependentUpon>EditPersonalRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowLeaseUI.resx">
+      <DependentUpon>ShowLeaseUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowEstateReportUI.resx">
+      <DependentUpon>ShowEstateReportUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowOutputUI.resx">
+      <DependentUpon>ShowOutputUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPersonalInfoUI.resx">
+      <DependentUpon>ShowPersonalInfoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPersonalRoleUI.resx">
+      <DependentUpon>ShowPersonalRoleUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCoordinatingCouncil.resx">
+      <DependentUpon>EditCoordinatingCouncil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEstateUI.resx">
+      <DependentUpon>EditEstateUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditJobUI.resx">
+      <DependentUpon>EditJobUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMaritalStatusUI.resx">
+      <DependentUpon>EditMaritalStatusUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEstateTypeUI.resx">
+      <DependentUpon>EditEstateTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPersonalInfo.resx">
+      <DependentUpon>EditPersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRoleTypeUI.resx">
+      <DependentUpon>EditRoleTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMilitaryStatusUI.resx">
+      <DependentUpon>EditMilitaryStatusUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSettingUI.resx">
+      <DependentUpon>EditSettingUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI.resx">
+      <DependentUpon>MainUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\ReportState.frx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\BusinessObjectLayer.Report.Patient.RecieveHistoryReportItemsBOL.datasource" />
+    <None Include="Properties\DataSources\BusinessObjectLayer.Report.Patient.ServiceHistoryReportItemsBOL.datasource" />
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="RestoreBackupUI.resx">
+      <DependentUpon>RestoreBackupUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowCoordinatingCouncilUI.resx">
+      <DependentUpon>ShowCoordinatingCouncilUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowEstateUI.resx">
+      <DependentUpon>ShowEstateUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowJobUI.resx">
+      <DependentUpon>ShowJobUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowMaritalStatusUI.resx">
+      <DependentUpon>ShowMaritalStatusUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowEstateTypeUI.resx">
+      <DependentUpon>ShowEstateTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowCheckUI.resx">
+      <DependentUpon>ShowCheckUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPurchaseLetterUI.resx">
+      <DependentUpon>ShowPurchaseLetterUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowRoleTypeUI.resx">
+      <DependentUpon>ShowRoleTypeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowMilitaryStatusUI.resx">
+      <DependentUpon>ShowMilitaryStatusUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowSettingUI.resx">
+      <DependentUpon>ShowSettingUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUserUI.resx">
+      <DependentUpon>EditUserUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExceptionHandlerUI.resx">
+      <DependentUpon>ExceptionHandlerUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowUserUI.resx">
+      <DependentUpon>ShowUserUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\BusinessObjectLayer.CostReportItemsBOL.datasource" />
+    <None Include="Properties\DataSources\BusinessObjectLayer.CostReportPatientBOL.datasource" />
+    <None Include="Properties\DataSources\BusinessObjectLayer.LaboratoryReportItemsBOL.datasource" />
+    <None Include="Properties\DataSources\BusinessObjectLayer.PatientListReportItemsBOL.datasource" />
+    <None Include="Properties\DataSources\BusinessObjectLayer.PatientListReportPatientBOL.datasource" />
+    <None Include="Properties\DataSources\BusinessObjectLayer.PrescriptionListReportItemsBOL.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ShowUserUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowUserUI.designer.cs">
+      <DependentUpon>ShowUserUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin.designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dll\FastReport.Bars.dll" />
+    <Content Include="Dll\FastReport.dll" />
+    <Content Include="Dll\FastReport.Editor.dll" />
+    <Content Include="Dll\FastReport.Install.dll" />
+    <Content Include="Dll\FastReport.VSDesign.dll" />
+    <Content Include="Dll\FastReport.Web.dll" />
+    <Content Include="Dll\Telerik.WinControls.ChartView.dll" />
+    <Content Include="Dll\Telerik.WinControls.dll" />
+    <Content Include="Dll\Telerik.WinControls.GridView.dll" />
+    <Content Include="Dll\Telerik.WinControls.RadDock.dll" />
+    <Content Include="Dll\Telerik.WinControls.Themes.Office2010Blue.dll" />
+    <Content Include="Dll\Telerik.WinControls.UI.Design.dll" />
+    <Content Include="Dll\Telerik.WinControls.UI.dll" />
+    <Content Include="Dll\Telerik.Windows.Controls.dll" />
+    <Content Include="Dll\telerik.windows.controls.navigation.dll" />
+    <Content Include="Dll\Telerik.Windows.Data.dll" />
+    <Content Include="Dll\TelerikCommon.dll" />
+    <Content Include="Icon\BackupDatabase48.png" />
+    <None Include="Resources\reports48.png" />
+    <None Include="Icon\Verticals48.png" />
+    <None Include="Icon\chequ.png" />
+    <None Include="Icon\chequ1.png" />
+    <None Include="Icon\Cascades48.png" />
+    <Content Include="Icon\CostReport 48.png" />
+    <Content Include="Icon\CostReport48.png" />
+    <Content Include="Icon\EquipmentHistory48.png" />
+    <None Include="Resources\Vertical48.png" />
+    <None Include="Resources\Horizontal48.png" />
+    <None Include="Resources\Cascade481.png" />
+    <None Include="Resources\Cascade48.png" />
+    <None Include="Resources\Minimize48.png" />
+    <None Include="Icon\estate.png" />
+    <None Include="Icon\estates.png" />
+    <Content Include="Icon\Exit48.png" />
+    <None Include="Icon\Horizontals48.png" />
+    <Content Include="Icon\Image48.png" />
+    <None Include="Icon\Jobsss48.png" />
+    <Content Include="Icon\LaboratoryState48.png" />
+    <Content Include="Icon\MaritalStatus48.png" />
+    <Content Include="Icon\MilitaryStatus48.png" />
+    <None Include="Icon\MinimizeBlue48.png" />
+    <Content Include="Icon\NewPatient48.png" />
+    <Content Include="Icon\Password48.png" />
+    <Content Include="Icon\PrescriptionReport48.png" />
+    <Content Include="Icon\Recieve48.png" />
+    <Content Include="Icon\RecieveReport48.png" />
+    <Content Include="Icon\Report48.png" />
+    <Content Include="Icon\RestoreBackupDatabase48.png" />
+    <Content Include="Icon\ServiceType48.png" />
+    <Content Include="Icon\ServiceTypeReport48.png" />
+    <Content Include="Icon\Vertical48.png" />
+    <Content Include="Icon.ico" />
+    <Content Include="Icon\About48.png" />
+    <Content Include="Icon\Access48.png" />
+    <Content Include="Icon\Alarm48.png" />
+    <Content Include="Icon\Appointment48.png" />
+    <Content Include="Icon\Cascade48.png" />
+    <Content Include="Icon\ChangeUser48.png" />
+    <Content Include="Icon\Close48.png" />
+    <Content Include="Icon\Diseases48.jpg" />
+    <Content Include="Icon\Doctor48.png" />
+    <Content Include="Icon\Equipment48.png" />
+    <Content Include="Icon\Horizontal48.png" />
+    <Content Include="Icon\Insurance48.png" />
+    <Content Include="Icon\Job48.png" />
+    <Content Include="Icon\Laboratory48.png" />
+    <Content Include="Icon\LaboratoryReport48.png" />
+    <Content Include="Icon\Banner.jpg" />
+    <Content Include="Icon\Diseases.jpg" />
+    <Content Include="Icon\Login.png" />
+    <Content Include="Icon\LogOut48.png" />
+    <Content Include="Icon\Minimize48.png" />
+    <Content Include="Icon\NewPatient48.jpg" />
+    <Content Include="Icon\NoImage 128.jpg" />
+    <Content Include="Icon\NoImage.jpg" />
+    <Content Include="Icon\Patient48.png" />
+    <Content Include="Icon\PatientInfo.gif" />
+    <Content Include="Icon\PatientListReport48.png" />
+    <Content Include="Icon\PhoneBook48.png" />
+    <Content Include="Icon\PrescriptionListReport48.png" />
+    <Content Include="Icon\Restore48.png" />
+    <Content Include="Icon\RestoreBackup48.png" />
+    <Content Include="Icon\Role48.png" />
+    <Content Include="Icon\Scanner48.png" />
+    <Content Include="Icon\Scheduler48.png" />
+    <Content Include="Icon\Service48.png" />
+    <Content Include="Icon\Setting48.png" />
+    <Content Include="Icon\Specialist48.png" />
+    <Content Include="Icon\Tools48.png" />
+    <Content Include="Icon\Tooth1.jpg" />
+    <Content Include="Icon\Tooth2.jpg" />
+    <Content Include="Icon\Tooth48.png" />
+    <Content Include="Icon\Icon.ico" />
+    <Content Include="Icon\User48.png" />
+    <None Include="Resources\Edit pic11.jpg" />
+    <None Include="Resources\backhround1.JPG" />
+    <None Include="Resources\backhround.JPG" />
+    <None Include="Resources\Edit pic1.jpg" />
+    <None Include="Resources\role Type48.jpg" />
+    <None Include="Resources\Check48.png" />
+    <None Include="Resources\Estate type48.png" />
+    <None Include="Resources\job.png" />
+    <None Include="Resources\Estate type.png" />
+    <None Include="Resources\Roles48.png" />
+    <None Include="Resources\Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FarsiCalendarComponent">
+      <HintPath>D:\Dr.Ramezani\Ref\FarsiCalendarComponent.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=1.8.23.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=1.8.23.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=1.8.23.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Install, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\FastReport.Install.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.VSDesign, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\FastReport.VSDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Web, Version=1.8.23.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\FastReport.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="JntMsgBox">
+      <HintPath>D:\Dr.Ramezani\Ref\JntMsgBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\election\Election\Election\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Smo\11.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Noogen.Validation">
+      <HintPath>D:\Dr.Ramezani\Ref\Noogen.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.XML">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2013.1.321.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Ref\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2013.1.321.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Ref\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack">
+      <HintPath>..\..\Ref\Telerik.WinControls.Themes.HighContrastBlack.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2013.1.321.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2013.1.321.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Ref\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI.Design, Version=2013.1.321.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Ref\Telerik.WinControls.UI.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2013.1.321.20, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Ref\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ArcadeManagment.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="BusinessLogicLayer.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="BusinessObjectLayer.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ComplexDataType.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DataAccessLayer.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DataConvertor.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DataObjectLayer.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="EnvDTE">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.MSXML">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Diagnostics.STrace">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Dmf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Management.SmoMetadataProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Management.SqlParser">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.RegSvrEnum">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.ServiceBrokerEnum">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SmoExtended">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SqlClrProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SqlEnum">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.OLE.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.ProjectAggregator">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Interop.8.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.TextManager.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.TextManager.Interop.8.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.VSHelp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BusinessLogicLibrary\BusinessLogicLayer.csproj">
+      <Project>{0b49a33f-46ce-46ca-a354-c0c12df59f99}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="BusinessObjectLayer\BusinessObjectLayer.csproj">
+      <Project>{093ab4df-87b0-4498-b048-7e21e35881a1}</Project>
+      <Name>BusinessObjectLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="ComplexDataType\ComplexDataType.csproj">
+      <Project>{8248f680-4e16-4296-9ce6-04bfceb925af}</Project>
+      <Name>ComplexDataType</Name>
+    </ProjectReference>
+    <ProjectReference Include="DataAccessLibrary\DataAccessLayer.csproj">
+      <Project>{55758e78-ccbf-49cf-b93c-8f725c8a9c73}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="DataAccessObjectLayer\DataObjectLayer.csproj">
+      <Project>{3155953b-0c2a-4b6e-8346-827c2ec0fafd}</Project>
+      <Name>DataObjectLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="DataConvertor\DataConvertor.csproj">
+      <Project>{449678dd-ad6e-421a-8ed8-9a1d6e2650b8}</Project>
+      <Name>DataConvertor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utility\Utility.csproj">
+      <Project>{b3d01308-1a2a-4b90-a4a0-06b202bd984d}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

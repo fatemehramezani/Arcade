@@ -1,0 +1,1520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ArcadeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ArcadeModelStoreContainer">
+          <EntitySet Name="Basis" EntityType="ArcadeModel.Store.Basis" store:Type="Tables" Schema="Accounting" />
+          <EntitySet Name="Event" EntityType="ArcadeModel.Store.Event" store:Type="Tables" Schema="Accounting" />
+          <EntitySet Name="InPut" EntityType="ArcadeModel.Store.InPut" store:Type="Tables" Schema="Accounting" />
+          <EntitySet Name="OutPut" EntityType="ArcadeModel.Store.OutPut" store:Type="Tables" Schema="Accounting" />
+          <EntitySet Name="EstateType" EntityType="ArcadeModel.Store.EstateType" store:Type="Tables" Schema="Basic" />
+          <EntitySet Name="Job" EntityType="ArcadeModel.Store.Job" store:Type="Tables" Schema="Basic" />
+          <EntitySet Name="MaritalStatus" EntityType="ArcadeModel.Store.MaritalStatus" store:Type="Tables" Schema="Basic" />
+          <EntitySet Name="MilitaryStatus" EntityType="ArcadeModel.Store.MilitaryStatus" store:Type="Tables" Schema="Basic" />
+          <EntitySet Name="PaymentType" EntityType="ArcadeModel.Store.PaymentType" store:Type="Tables" Schema="Basic" />
+          <EntitySet Name="RoleType" EntityType="ArcadeModel.Store.RoleType" store:Type="Tables" Schema="Basic" />
+          <EntitySet Name="sysdiagrams" EntityType="ArcadeModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USER" EntityType="ArcadeModel.Store.USER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Check" EntityType="ArcadeModel.Store.Check" store:Type="Tables" Schema="System" />
+          <EntitySet Name="Constraction" EntityType="ArcadeModel.Store.Constraction" store:Type="Tables" Schema="System" />
+          <EntitySet Name="CoordinatingCouncil" EntityType="ArcadeModel.Store.CoordinatingCouncil" store:Type="Tables" Schema="System" />
+          <EntitySet Name="Estate" EntityType="ArcadeModel.Store.Estate" store:Type="Tables" Schema="System" />
+          <EntitySet Name="LandLord" EntityType="ArcadeModel.Store.LandLord" store:Type="Tables" Schema="System" />
+          <EntitySet Name="Lease" EntityType="ArcadeModel.Store.Lease" store:Type="Tables" Schema="System" />
+          <EntitySet Name="PersonalInfo" EntityType="ArcadeModel.Store.PersonalInfo" store:Type="Tables" Schema="System" />
+          <EntitySet Name="PurchaseLetter" EntityType="ArcadeModel.Store.PurchaseLetter" store:Type="Tables" Schema="System" />
+          <EntitySet Name="RentPayment" EntityType="ArcadeModel.Store.RentPayment" store:Type="Tables" Schema="System" />
+          <EntitySet Name="Role" EntityType="ArcadeModel.Store.Role" store:Type="Tables" Schema="System" />
+          <AssociationSet Name="FK_Basis_Event" Association="ArcadeModel.Store.FK_Basis_Event">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="Basis" EntitySet="Basis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Entrance_Estate" Association="ArcadeModel.Store.FK_Entrance_Estate">
+            <End Role="Estate" EntitySet="Estate" />
+            <End Role="InPut" EntitySet="InPut" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Entrance_Event" Association="ArcadeModel.Store.FK_Entrance_Event">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="InPut" EntitySet="InPut" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Estate_EstateType1" Association="ArcadeModel.Store.FK_Estate_EstateType1">
+            <End Role="EstateType" EntitySet="EstateType" />
+            <End Role="Estate" EntitySet="Estate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LandLord_Estate" Association="ArcadeModel.Store.FK_LandLord_Estate">
+            <End Role="Estate" EntitySet="Estate" />
+            <End Role="LandLord" EntitySet="LandLord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LandLord_personalInfo" Association="ArcadeModel.Store.FK_LandLord_personalInfo">
+            <End Role="PersonalInfo" EntitySet="PersonalInfo" />
+            <End Role="LandLord" EntitySet="LandLord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lease_CoordinatingCouncil" Association="ArcadeModel.Store.FK_Lease_CoordinatingCouncil">
+            <End Role="CoordinatingCouncil" EntitySet="CoordinatingCouncil" />
+            <End Role="Lease" EntitySet="Lease" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lease_Job" Association="ArcadeModel.Store.FK_Lease_Job">
+            <End Role="Job" EntitySet="Job" />
+            <End Role="Lease" EntitySet="Lease" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lease_LandLord" Association="ArcadeModel.Store.FK_Lease_LandLord">
+            <End Role="LandLord" EntitySet="LandLord" />
+            <End Role="Lease" EntitySet="Lease" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lease_PersonalInfo" Association="ArcadeModel.Store.FK_Lease_PersonalInfo">
+            <End Role="PersonalInfo" EntitySet="PersonalInfo" />
+            <End Role="Lease" EntitySet="Lease" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OutPut_Event" Association="ArcadeModel.Store.FK_OutPut_Event">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="OutPut" EntitySet="OutPut" />
+          </AssociationSet>
+          <AssociationSet Name="FK_personalInformation_Job" Association="ArcadeModel.Store.FK_personalInformation_Job">
+            <End Role="Job" EntitySet="Job" />
+            <End Role="PersonalInfo" EntitySet="PersonalInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonInfo_MaritalStatus" Association="ArcadeModel.Store.FK_PersonInfo_MaritalStatus">
+            <End Role="MaritalStatus" EntitySet="MaritalStatus" />
+            <End Role="PersonalInfo" EntitySet="PersonalInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonInfo_MilitaryStatus" Association="ArcadeModel.Store.FK_PersonInfo_MilitaryStatus">
+            <End Role="MilitaryStatus" EntitySet="MilitaryStatus" />
+            <End Role="PersonalInfo" EntitySet="PersonalInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseLetter_CoordinatingCouncil" Association="ArcadeModel.Store.FK_PurchaseLetter_CoordinatingCouncil">
+            <End Role="CoordinatingCouncil" EntitySet="CoordinatingCouncil" />
+            <End Role="PurchaseLetter" EntitySet="PurchaseLetter" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseLetter_LandLord" Association="ArcadeModel.Store.FK_PurchaseLetter_LandLord">
+            <End Role="LandLord" EntitySet="LandLord" />
+            <End Role="PurchaseLetter" EntitySet="PurchaseLetter" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseLetter_PersonalInfo" Association="ArcadeModel.Store.FK_PurchaseLetter_PersonalInfo">
+            <End Role="PersonalInfo" EntitySet="PersonalInfo" />
+            <End Role="PurchaseLetter" EntitySet="PurchaseLetter" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Role_PersonInfo" Association="ArcadeModel.Store.FK_Role_PersonInfo">
+            <End Role="PersonalInfo" EntitySet="PersonalInfo" />
+            <End Role="Role" EntitySet="Role" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Role_Role" Association="ArcadeModel.Store.FK_Role_Role">
+            <End Role="RoleType" EntitySet="RoleType" />
+            <End Role="Role" EntitySet="Role" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Basis">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="EventId" Type="int" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nchar" Nullable="false" MaxLength="64" />
+          <Property Name="Description" Type="nvarchar" MaxLength="512" />
+          <Property Name="EstateIds" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="InPut">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="EstateId" Type="int" Nullable="false" />
+          <Property Name="EventId" Type="int" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="OutPut">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="EventId" Type="int" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nchar" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="EstateType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="MaritalStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="MilitaryStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="PaymentType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="16" />
+          <Property Name="Title" Type="nchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="RoleType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="tinyint" Nullable="false" />
+          <Property Name="USERNAME" Type="nvarchar" Nullable="false" MaxLength="16" />
+          <Property Name="PASSWORD" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="DESCRIPTION" Type="nchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Check">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Number" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="AccountNumber" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="AccountName" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="32" />
+          <Property Name="ForWhom" Type="nvarchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="Constraction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="DeliveryDate" Type="datetime" />
+          <Property Name="UnitNumber" Type="tinyint" />
+          <Property Name="EstateId" Type="int" Nullable="false" />
+          <Property Name="ConstractorName" Type="nvarchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="CoordinatingCouncil">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="FatherName" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="MembershipDate" Type="datetime" />
+          <Property Name="NationalCode" Type="nvarchar" MaxLength="12" />
+          <Property Name="QuitDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Estate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ZipCode" Type="nvarchar" Nullable="false" MaxLength="16" />
+          <Property Name="Area" Type="int" Nullable="false" />
+          <Property Name="Facilities" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Floor" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="512" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="11" />
+          <Property Name="EstateTypeId" Type="tinyint" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="LandLord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="PersonalInfoId" Type="int" Nullable="false" />
+          <Property Name="Share" Type="tinyint" />
+          <Property Name="Type" Type="bit" Nullable="false" />
+          <Property Name="EstateId" Type="int" Nullable="false" />
+          <Property Name="IsLandLord" Type="bit" />
+        </EntityType>
+        <EntityType Name="Lease">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="LandLordId" Type="int" Nullable="false" />
+          <Property Name="TanentPersonalInfo" Type="int" Nullable="false" />
+          <Property Name="Leasehold" Type="money" Nullable="false" />
+          <Property Name="LeaseMounth" Type="tinyint" />
+          <Property Name="FromDate" Type="datetime" Nullable="false" />
+          <Property Name="ToDate" Type="datetime" Nullable="false" />
+          <Property Name="Charge" Type="money" Nullable="false" />
+          <Property Name="LateCharge" Type="money" Nullable="false" />
+          <Property Name="CouncilId" Type="int" Nullable="false" />
+          <Property Name="JobId" Type="tinyint" Nullable="false" />
+          <Property Name="PaymentType" Type="nvarchar" Nullable="false" MaxLength="16" />
+          <Property Name="Prepayment" Type="money" Nullable="false" />
+          <Property Name="Witness" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="16" />
+          <Property Name="AmountInWords" Type="nvarchar" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="PersonalInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="FatherName" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="NationalCode" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="Cetificate" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="IssuancePlace" Type="nvarchar" MaxLength="32" />
+          <Property Name="BirthPlace" Type="nvarchar" MaxLength="32" />
+          <Property Name="Birthday" Type="datetime" Nullable="false" />
+          <Property Name="IsMale" Type="bit" Nullable="false" />
+          <Property Name="MaritalStatuseId" Type="tinyint" Nullable="false" />
+          <Property Name="Phone" Type="nchar" MaxLength="11" />
+          <Property Name="Mobile" Type="nchar" MaxLength="11" />
+          <Property Name="Image" Type="image" />
+          <Property Name="MilitaryStatuseId" Type="tinyint" Nullable="false" />
+          <Property Name="JobAddress" Type="nvarchar" MaxLength="512" />
+          <Property Name="JobPhone" Type="nvarchar" MaxLength="11" />
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="512" />
+          <Property Name="JobId" Type="tinyint" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="32" />
+          <Property Name="CompanyAddress" Type="nvarchar" MaxLength="512" />
+          <Property Name="CompanyPhone" Type="nvarchar" MaxLength="11" />
+          <Property Name="IsLegal" Type="bit" Nullable="false" />
+          <Property Name="ZipeCode" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="PurchaseLetter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="DeliveryDate" Type="datetime" Nullable="false" />
+          <Property Name="Transmiter" Type="nvarchar" MaxLength="64" />
+          <Property Name="ContarctDate" Type="datetime" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="SellerId" Type="int" Nullable="false" />
+          <Property Name="CostumerId" Type="int" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="CouncilId" Type="int" Nullable="false" />
+          <Property Name="Prepayment" Type="money" />
+          <Property Name="TransforRedress" Type="money" />
+          <Property Name="CommitmentRedress" Type="money" />
+          <Property Name="WitnessName1" Type="nvarchar" MaxLength="64" />
+          <Property Name="WitnessName2" Type="nvarchar" MaxLength="64" />
+          <Property Name="Code" Type="nvarchar" MaxLength="16" />
+          <Property Name="CheckNumbers" Type="nvarchar" MaxLength="128" />
+          <Property Name="AmountInWords" Type="nvarchar" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="RentPayment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LeaseId" Type="int" Nullable="false" />
+          <Property Name="PayDate" Type="datetime" Nullable="false" />
+          <Property Name="NextDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleTypeId" Type="tinyint" Nullable="false" />
+          <Property Name="PersonalInfoId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Basis_Event">
+          <End Role="Event" Type="ArcadeModel.Store.Event" Multiplicity="1" />
+          <End Role="Basis" Type="ArcadeModel.Store.Basis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Basis">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Entrance_Estate">
+          <End Role="Estate" Type="ArcadeModel.Store.Estate" Multiplicity="1" />
+          <End Role="InPut" Type="ArcadeModel.Store.InPut" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estate">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InPut">
+              <PropertyRef Name="EstateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Entrance_Event">
+          <End Role="Event" Type="ArcadeModel.Store.Event" Multiplicity="1" />
+          <End Role="InPut" Type="ArcadeModel.Store.InPut" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InPut">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Estate_EstateType1">
+          <End Role="EstateType" Type="ArcadeModel.Store.EstateType" Multiplicity="1" />
+          <End Role="Estate" Type="ArcadeModel.Store.Estate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstateType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Estate">
+              <PropertyRef Name="EstateTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LandLord_Estate">
+          <End Role="Estate" Type="ArcadeModel.Store.Estate" Multiplicity="1" />
+          <End Role="LandLord" Type="ArcadeModel.Store.LandLord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estate">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LandLord">
+              <PropertyRef Name="EstateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LandLord_personalInfo">
+          <End Role="PersonalInfo" Type="ArcadeModel.Store.PersonalInfo" Multiplicity="1" />
+          <End Role="LandLord" Type="ArcadeModel.Store.LandLord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LandLord">
+              <PropertyRef Name="PersonalInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lease_CoordinatingCouncil">
+          <End Role="CoordinatingCouncil" Type="ArcadeModel.Store.CoordinatingCouncil" Multiplicity="1" />
+          <End Role="Lease" Type="ArcadeModel.Store.Lease" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoordinatingCouncil">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lease">
+              <PropertyRef Name="CouncilId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lease_Job">
+          <End Role="Job" Type="ArcadeModel.Store.Job" Multiplicity="1" />
+          <End Role="Lease" Type="ArcadeModel.Store.Lease" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lease">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lease_LandLord">
+          <End Role="LandLord" Type="ArcadeModel.Store.LandLord" Multiplicity="1" />
+          <End Role="Lease" Type="ArcadeModel.Store.Lease" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LandLord">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lease">
+              <PropertyRef Name="LandLordId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lease_PersonalInfo">
+          <End Role="PersonalInfo" Type="ArcadeModel.Store.PersonalInfo" Multiplicity="1" />
+          <End Role="Lease" Type="ArcadeModel.Store.Lease" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lease">
+              <PropertyRef Name="TanentPersonalInfo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OutPut_Event">
+          <End Role="Event" Type="ArcadeModel.Store.Event" Multiplicity="1" />
+          <End Role="OutPut" Type="ArcadeModel.Store.OutPut" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OutPut">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_personalInformation_Job">
+          <End Role="Job" Type="ArcadeModel.Store.Job" Multiplicity="0..1" />
+          <End Role="PersonalInfo" Type="ArcadeModel.Store.PersonalInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonalInfo">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonInfo_MaritalStatus">
+          <End Role="MaritalStatus" Type="ArcadeModel.Store.MaritalStatus" Multiplicity="1" />
+          <End Role="PersonalInfo" Type="ArcadeModel.Store.PersonalInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MaritalStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonalInfo">
+              <PropertyRef Name="MaritalStatuseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonInfo_MilitaryStatus">
+          <End Role="MilitaryStatus" Type="ArcadeModel.Store.MilitaryStatus" Multiplicity="1" />
+          <End Role="PersonalInfo" Type="ArcadeModel.Store.PersonalInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MilitaryStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonalInfo">
+              <PropertyRef Name="MilitaryStatuseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseLetter_CoordinatingCouncil">
+          <End Role="CoordinatingCouncil" Type="ArcadeModel.Store.CoordinatingCouncil" Multiplicity="1" />
+          <End Role="PurchaseLetter" Type="ArcadeModel.Store.PurchaseLetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoordinatingCouncil">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseLetter">
+              <PropertyRef Name="CouncilId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseLetter_LandLord">
+          <End Role="LandLord" Type="ArcadeModel.Store.LandLord" Multiplicity="1" />
+          <End Role="PurchaseLetter" Type="ArcadeModel.Store.PurchaseLetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LandLord">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseLetter">
+              <PropertyRef Name="SellerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseLetter_PersonalInfo">
+          <End Role="PersonalInfo" Type="ArcadeModel.Store.PersonalInfo" Multiplicity="1" />
+          <End Role="PurchaseLetter" Type="ArcadeModel.Store.PurchaseLetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseLetter">
+              <PropertyRef Name="CostumerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Role_PersonInfo">
+          <End Role="PersonalInfo" Type="ArcadeModel.Store.PersonalInfo" Multiplicity="1" />
+          <End Role="Role" Type="ArcadeModel.Store.Role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Role">
+              <PropertyRef Name="PersonalInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Role_Role">
+          <End Role="RoleType" Type="ArcadeModel.Store.RoleType" Multiplicity="1" />
+          <End Role="Role" Type="ArcadeModel.Store.Role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Role">
+              <PropertyRef Name="RoleTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'Arcade.dbo.EXCEPTION_HANDLER' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="EXCEPTION_HANDLER">
+        <Property Name="TITLE" Type="nvarchar" MaxLength="256" />
+        <Property Name="KEY_VALUES" Type="nvarchar" MaxLength="512" />
+        <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="512" />
+        <Property Name="HELP_NOTE" Type="nvarchar" MaxLength="512" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'Arcade.dbo.NoSelection' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="NoSelection">
+        <Property Name="ID" Type="int" />
+        <Property Name="TEXT" Type="nvarchar" MaxLength="32" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ArcadeModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ArcadeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bases" EntityType="ArcadeModel.Basis" />
+          <EntitySet Name="Events" EntityType="ArcadeModel.Event" />
+          <EntitySet Name="InPuts" EntityType="ArcadeModel.InPut" />
+          <EntitySet Name="OutPuts" EntityType="ArcadeModel.OutPut" />
+          <EntitySet Name="EstateTypes" EntityType="ArcadeModel.EstateType" />
+          <EntitySet Name="Jobs" EntityType="ArcadeModel.Job" />
+          <EntitySet Name="MaritalStatus" EntityType="ArcadeModel.MaritalStatu" />
+          <EntitySet Name="MilitaryStatus" EntityType="ArcadeModel.MilitaryStatu" />
+          <EntitySet Name="PaymentTypes" EntityType="ArcadeModel.PaymentType" />
+          <EntitySet Name="RoleTypes" EntityType="ArcadeModel.RoleType" />
+          <EntitySet Name="sysdiagrams" EntityType="ArcadeModel.sysdiagram" />
+          <EntitySet Name="USERs" EntityType="ArcadeModel.USER" />
+          <EntitySet Name="Checks" EntityType="ArcadeModel.Check" />
+          <EntitySet Name="Constractions" EntityType="ArcadeModel.Constraction" />
+          <EntitySet Name="CoordinatingCouncils" EntityType="ArcadeModel.CoordinatingCouncil" />
+          <EntitySet Name="Estates" EntityType="ArcadeModel.Estate" />
+          <EntitySet Name="LandLords" EntityType="ArcadeModel.LandLord" />
+          <EntitySet Name="Leases" EntityType="ArcadeModel.Lease" />
+          <EntitySet Name="PersonalInfoes" EntityType="ArcadeModel.PersonalInfo" />
+          <EntitySet Name="PurchaseLetters" EntityType="ArcadeModel.PurchaseLetter" />
+          <EntitySet Name="RentPayments" EntityType="ArcadeModel.RentPayment" />
+          <EntitySet Name="Roles" EntityType="ArcadeModel.Role" />
+          <AssociationSet Name="FK_Basis_Event" Association="ArcadeModel.FK_Basis_Event">
+            <End Role="Event" EntitySet="Events" />
+            <End Role="Basis" EntitySet="Bases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Entrance_Event" Association="ArcadeModel.FK_Entrance_Event">
+            <End Role="Event" EntitySet="Events" />
+            <End Role="InPut" EntitySet="InPuts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OutPut_Event" Association="ArcadeModel.FK_OutPut_Event">
+            <End Role="Event" EntitySet="Events" />
+            <End Role="OutPut" EntitySet="OutPuts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Entrance_Estate" Association="ArcadeModel.FK_Entrance_Estate">
+            <End Role="Estate" EntitySet="Estates" />
+            <End Role="InPut" EntitySet="InPuts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Estate_EstateType1" Association="ArcadeModel.FK_Estate_EstateType1">
+            <End Role="EstateType" EntitySet="EstateTypes" />
+            <End Role="Estate" EntitySet="Estates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lease_Job" Association="ArcadeModel.FK_Lease_Job">
+            <End Role="Job" EntitySet="Jobs" />
+            <End Role="Lease" EntitySet="Leases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_personalInformation_Job" Association="ArcadeModel.FK_personalInformation_Job">
+            <End Role="Job" EntitySet="Jobs" />
+            <End Role="PersonalInfo" EntitySet="PersonalInfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonInfo_MaritalStatus" Association="ArcadeModel.FK_PersonInfo_MaritalStatus">
+            <End Role="MaritalStatus" EntitySet="MaritalStatus" />
+            <End Role="PersonalInfo" EntitySet="PersonalInfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonInfo_MilitaryStatus" Association="ArcadeModel.FK_PersonInfo_MilitaryStatus">
+            <End Role="MilitaryStatus" EntitySet="MilitaryStatus" />
+            <End Role="PersonalInfo" EntitySet="PersonalInfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Role_Role" Association="ArcadeModel.FK_Role_Role">
+            <End Role="RoleType" EntitySet="RoleTypes" />
+            <End Role="Role" EntitySet="Roles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lease_CoordinatingCouncil" Association="ArcadeModel.FK_Lease_CoordinatingCouncil">
+            <End Role="CoordinatingCouncil" EntitySet="CoordinatingCouncils" />
+            <End Role="Lease" EntitySet="Leases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseLetter_CoordinatingCouncil" Association="ArcadeModel.FK_PurchaseLetter_CoordinatingCouncil">
+            <End Role="CoordinatingCouncil" EntitySet="CoordinatingCouncils" />
+            <End Role="PurchaseLetter" EntitySet="PurchaseLetters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LandLord_Estate" Association="ArcadeModel.FK_LandLord_Estate">
+            <End Role="Estate" EntitySet="Estates" />
+            <End Role="LandLord" EntitySet="LandLords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LandLord_personalInfo" Association="ArcadeModel.FK_LandLord_personalInfo">
+            <End Role="PersonalInfo" EntitySet="PersonalInfoes" />
+            <End Role="LandLord" EntitySet="LandLords" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lease_LandLord" Association="ArcadeModel.FK_Lease_LandLord">
+            <End Role="LandLord" EntitySet="LandLords" />
+            <End Role="Lease" EntitySet="Leases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseLetter_LandLord" Association="ArcadeModel.FK_PurchaseLetter_LandLord">
+            <End Role="LandLord" EntitySet="LandLords" />
+            <End Role="PurchaseLetter" EntitySet="PurchaseLetters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lease_PersonalInfo" Association="ArcadeModel.FK_Lease_PersonalInfo">
+            <End Role="PersonalInfo" EntitySet="PersonalInfoes" />
+            <End Role="Lease" EntitySet="Leases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PurchaseLetter_PersonalInfo" Association="ArcadeModel.FK_PurchaseLetter_PersonalInfo">
+            <End Role="PersonalInfo" EntitySet="PersonalInfoes" />
+            <End Role="PurchaseLetter" EntitySet="PurchaseLetters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Role_PersonInfo" Association="ArcadeModel.FK_Role_PersonInfo">
+            <End Role="PersonalInfo" EntitySet="PersonalInfoes" />
+            <End Role="Role" EntitySet="Roles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Basis">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="EventId" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Event" Relationship="ArcadeModel.FK_Basis_Event" FromRole="Basis" ToRole="Event" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="true" />
+          <Property Name="Description" Type="String" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="EstateIds" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Bases" Relationship="ArcadeModel.FK_Basis_Event" FromRole="Event" ToRole="Basis" />
+          <NavigationProperty Name="InPuts" Relationship="ArcadeModel.FK_Entrance_Event" FromRole="Event" ToRole="InPut" />
+          <NavigationProperty Name="OutPuts" Relationship="ArcadeModel.FK_OutPut_Event" FromRole="Event" ToRole="OutPut" />
+        </EntityType>
+        <EntityType Name="InPut">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="EstateId" Type="Int32" Nullable="false" />
+          <Property Name="EventId" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="512" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Event" Relationship="ArcadeModel.FK_Entrance_Event" FromRole="InPut" ToRole="Event" />
+          <NavigationProperty Name="Estate" Relationship="ArcadeModel.FK_Entrance_Estate" FromRole="InPut" ToRole="Estate" />
+        </EntityType>
+        <EntityType Name="OutPut">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="EventId" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="512" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="Event" Relationship="ArcadeModel.FK_OutPut_Event" FromRole="OutPut" ToRole="Event" />
+        </EntityType>
+        <EntityType Name="EstateType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Estates" Relationship="ArcadeModel.FK_Estate_EstateType1" FromRole="EstateType" ToRole="Estate" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Leases" Relationship="ArcadeModel.FK_Lease_Job" FromRole="Job" ToRole="Lease" />
+          <NavigationProperty Name="PersonalInfoes" Relationship="ArcadeModel.FK_personalInformation_Job" FromRole="Job" ToRole="PersonalInfo" />
+        </EntityType>
+        <EntityType Name="MaritalStatu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PersonalInfoes" Relationship="ArcadeModel.FK_PersonInfo_MaritalStatus" FromRole="MaritalStatus" ToRole="PersonalInfo" />
+        </EntityType>
+        <EntityType Name="MilitaryStatu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PersonalInfoes" Relationship="ArcadeModel.FK_PersonInfo_MilitaryStatus" FromRole="MilitaryStatus" ToRole="PersonalInfo" />
+        </EntityType>
+        <EntityType Name="PaymentType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="RoleType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Roles" Relationship="ArcadeModel.FK_Role_Role" FromRole="RoleType" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="Byte" Nullable="false" />
+          <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="PASSWORD" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="256" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="Check">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Number" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="AccountNumber" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AccountName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="BankName" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="ForWhom" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Constraction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="DeliveryDate" Type="DateTime" Precision="3" />
+          <Property Name="UnitNumber" Type="Byte" />
+          <Property Name="EstateId" Type="Int32" Nullable="false" />
+          <Property Name="ConstractorName" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CoordinatingCouncil">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="FatherName" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="MembershipDate" Type="DateTime" Precision="3" />
+          <Property Name="NationalCode" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="QuitDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Leases" Relationship="ArcadeModel.FK_Lease_CoordinatingCouncil" FromRole="CoordinatingCouncil" ToRole="Lease" />
+          <NavigationProperty Name="PurchaseLetters" Relationship="ArcadeModel.FK_PurchaseLetter_CoordinatingCouncil" FromRole="CoordinatingCouncil" ToRole="PurchaseLetter" />
+        </EntityType>
+        <EntityType Name="Estate">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="ZipCode" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="Area" Type="Int32" Nullable="false" />
+          <Property Name="Facilities" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Floor" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="11" Unicode="true" FixedLength="false" />
+          <Property Name="EstateTypeId" Type="Byte" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="InPuts" Relationship="ArcadeModel.FK_Entrance_Estate" FromRole="Estate" ToRole="InPut" />
+          <NavigationProperty Name="EstateType" Relationship="ArcadeModel.FK_Estate_EstateType1" FromRole="Estate" ToRole="EstateType" />
+          <NavigationProperty Name="LandLords" Relationship="ArcadeModel.FK_LandLord_Estate" FromRole="Estate" ToRole="LandLord" />
+        </EntityType>
+        <EntityType Name="LandLord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PersonalInfoId" Type="Int32" Nullable="false" />
+          <Property Name="Share" Type="Byte" />
+          <Property Name="Type" Type="Boolean" Nullable="false" />
+          <Property Name="EstateId" Type="Int32" Nullable="false" />
+          <Property Name="IsLandLord" Type="Boolean" />
+          <NavigationProperty Name="Estate" Relationship="ArcadeModel.FK_LandLord_Estate" FromRole="LandLord" ToRole="Estate" />
+          <NavigationProperty Name="PersonalInfo" Relationship="ArcadeModel.FK_LandLord_personalInfo" FromRole="LandLord" ToRole="PersonalInfo" />
+          <NavigationProperty Name="Leases" Relationship="ArcadeModel.FK_Lease_LandLord" FromRole="LandLord" ToRole="Lease" />
+          <NavigationProperty Name="PurchaseLetters" Relationship="ArcadeModel.FK_PurchaseLetter_LandLord" FromRole="LandLord" ToRole="PurchaseLetter" />
+        </EntityType>
+        <EntityType Name="Lease">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="LandLordId" Type="Int32" Nullable="false" />
+          <Property Name="TanentPersonalInfo" Type="Int32" Nullable="false" />
+          <Property Name="Leasehold" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="LeaseMounth" Type="Byte" />
+          <Property Name="FromDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ToDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Charge" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="LateCharge" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="CouncilId" Type="Int32" Nullable="false" />
+          <Property Name="JobId" Type="Byte" Nullable="false" />
+          <Property Name="PaymentType" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="Prepayment" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Witness" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="AmountInWords" Type="String" MaxLength="512" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Job" Relationship="ArcadeModel.FK_Lease_Job" FromRole="Lease" ToRole="Job" />
+          <NavigationProperty Name="CoordinatingCouncil" Relationship="ArcadeModel.FK_Lease_CoordinatingCouncil" FromRole="Lease" ToRole="CoordinatingCouncil" />
+          <NavigationProperty Name="LandLord" Relationship="ArcadeModel.FK_Lease_LandLord" FromRole="Lease" ToRole="LandLord" />
+          <NavigationProperty Name="PersonalInfo" Relationship="ArcadeModel.FK_Lease_PersonalInfo" FromRole="Lease" ToRole="PersonalInfo" />
+        </EntityType>
+        <EntityType Name="PersonalInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="FatherName" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="NationalCode" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="Cetificate" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="IssuancePlace" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="BirthPlace" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsMale" Type="Boolean" Nullable="false" />
+          <Property Name="MaritalStatuseId" Type="Byte" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="11" Unicode="true" FixedLength="true" />
+          <Property Name="Mobile" Type="String" MaxLength="11" Unicode="true" FixedLength="true" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="MilitaryStatuseId" Type="Byte" Nullable="false" />
+          <Property Name="JobAddress" Type="String" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="JobPhone" Type="String" MaxLength="11" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="JobId" Type="Byte" />
+          <Property Name="CompanyName" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="CompanyAddress" Type="String" MaxLength="512" Unicode="true" FixedLength="false" />
+          <Property Name="CompanyPhone" Type="String" MaxLength="11" Unicode="true" FixedLength="false" />
+          <Property Name="IsLegal" Type="Boolean" Nullable="false" />
+          <Property Name="ZipeCode" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="Job" Relationship="ArcadeModel.FK_personalInformation_Job" FromRole="PersonalInfo" ToRole="Job" />
+          <NavigationProperty Name="MaritalStatu" Relationship="ArcadeModel.FK_PersonInfo_MaritalStatus" FromRole="PersonalInfo" ToRole="MaritalStatus" />
+          <NavigationProperty Name="MilitaryStatu" Relationship="ArcadeModel.FK_PersonInfo_MilitaryStatus" FromRole="PersonalInfo" ToRole="MilitaryStatus" />
+          <NavigationProperty Name="LandLords" Relationship="ArcadeModel.FK_LandLord_personalInfo" FromRole="PersonalInfo" ToRole="LandLord" />
+          <NavigationProperty Name="Leases" Relationship="ArcadeModel.FK_Lease_PersonalInfo" FromRole="PersonalInfo" ToRole="Lease" />
+          <NavigationProperty Name="PurchaseLetters" Relationship="ArcadeModel.FK_PurchaseLetter_PersonalInfo" FromRole="PersonalInfo" ToRole="PurchaseLetter" />
+          <NavigationProperty Name="Roles" Relationship="ArcadeModel.FK_Role_PersonInfo" FromRole="PersonalInfo" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="PurchaseLetter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Transmiter" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="ContarctDate" Type="DateTime" Precision="3" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="SellerId" Type="Int32" Nullable="false" />
+          <Property Name="CostumerId" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="CouncilId" Type="Int32" Nullable="false" />
+          <Property Name="Prepayment" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TransforRedress" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CommitmentRedress" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="WitnessName1" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="WitnessName2" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="Code" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="CheckNumbers" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="AmountInWords" Type="String" MaxLength="512" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="CoordinatingCouncil" Relationship="ArcadeModel.FK_PurchaseLetter_CoordinatingCouncil" FromRole="PurchaseLetter" ToRole="CoordinatingCouncil" />
+          <NavigationProperty Name="LandLord" Relationship="ArcadeModel.FK_PurchaseLetter_LandLord" FromRole="PurchaseLetter" ToRole="LandLord" />
+          <NavigationProperty Name="PersonalInfo" Relationship="ArcadeModel.FK_PurchaseLetter_PersonalInfo" FromRole="PurchaseLetter" ToRole="PersonalInfo" />
+        </EntityType>
+        <EntityType Name="RentPayment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LeaseId" Type="Int32" Nullable="false" />
+          <Property Name="PayDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NextDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleTypeId" Type="Byte" Nullable="false" />
+          <Property Name="PersonalInfoId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="RoleType" Relationship="ArcadeModel.FK_Role_Role" FromRole="Role" ToRole="RoleType" />
+          <NavigationProperty Name="PersonalInfo" Relationship="ArcadeModel.FK_Role_PersonInfo" FromRole="Role" ToRole="PersonalInfo" />
+        </EntityType>
+        <Association Name="FK_Basis_Event">
+          <End Role="Event" Type="ArcadeModel.Event" Multiplicity="1" />
+          <End Role="Basis" Type="ArcadeModel.Basis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Basis">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Entrance_Event">
+          <End Role="Event" Type="ArcadeModel.Event" Multiplicity="1" />
+          <End Role="InPut" Type="ArcadeModel.InPut" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InPut">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OutPut_Event">
+          <End Role="Event" Type="ArcadeModel.Event" Multiplicity="1" />
+          <End Role="OutPut" Type="ArcadeModel.OutPut" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OutPut">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Entrance_Estate">
+          <End Role="Estate" Type="ArcadeModel.Estate" Multiplicity="1" />
+          <End Role="InPut" Type="ArcadeModel.InPut" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estate">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InPut">
+              <PropertyRef Name="EstateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Estate_EstateType1">
+          <End Role="EstateType" Type="ArcadeModel.EstateType" Multiplicity="1" />
+          <End Role="Estate" Type="ArcadeModel.Estate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstateType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Estate">
+              <PropertyRef Name="EstateTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lease_Job">
+          <End Role="Job" Type="ArcadeModel.Job" Multiplicity="1" />
+          <End Role="Lease" Type="ArcadeModel.Lease" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lease">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_personalInformation_Job">
+          <End Role="Job" Type="ArcadeModel.Job" Multiplicity="0..1" />
+          <End Role="PersonalInfo" Type="ArcadeModel.PersonalInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonalInfo">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonInfo_MaritalStatus">
+          <End Role="MaritalStatus" Type="ArcadeModel.MaritalStatu" Multiplicity="1" />
+          <End Role="PersonalInfo" Type="ArcadeModel.PersonalInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MaritalStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonalInfo">
+              <PropertyRef Name="MaritalStatuseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonInfo_MilitaryStatus">
+          <End Role="MilitaryStatus" Type="ArcadeModel.MilitaryStatu" Multiplicity="1" />
+          <End Role="PersonalInfo" Type="ArcadeModel.PersonalInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MilitaryStatus">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonalInfo">
+              <PropertyRef Name="MilitaryStatuseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Role_Role">
+          <End Role="RoleType" Type="ArcadeModel.RoleType" Multiplicity="1" />
+          <End Role="Role" Type="ArcadeModel.Role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Role">
+              <PropertyRef Name="RoleTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lease_CoordinatingCouncil">
+          <End Role="CoordinatingCouncil" Type="ArcadeModel.CoordinatingCouncil" Multiplicity="1" />
+          <End Role="Lease" Type="ArcadeModel.Lease" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoordinatingCouncil">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lease">
+              <PropertyRef Name="CouncilId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseLetter_CoordinatingCouncil">
+          <End Role="CoordinatingCouncil" Type="ArcadeModel.CoordinatingCouncil" Multiplicity="1" />
+          <End Role="PurchaseLetter" Type="ArcadeModel.PurchaseLetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoordinatingCouncil">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseLetter">
+              <PropertyRef Name="CouncilId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LandLord_Estate">
+          <End Role="Estate" Type="ArcadeModel.Estate" Multiplicity="1" />
+          <End Role="LandLord" Type="ArcadeModel.LandLord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estate">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LandLord">
+              <PropertyRef Name="EstateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LandLord_personalInfo">
+          <End Role="PersonalInfo" Type="ArcadeModel.PersonalInfo" Multiplicity="1" />
+          <End Role="LandLord" Type="ArcadeModel.LandLord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LandLord">
+              <PropertyRef Name="PersonalInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lease_LandLord">
+          <End Role="LandLord" Type="ArcadeModel.LandLord" Multiplicity="1" />
+          <End Role="Lease" Type="ArcadeModel.Lease" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LandLord">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lease">
+              <PropertyRef Name="LandLordId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseLetter_LandLord">
+          <End Role="LandLord" Type="ArcadeModel.LandLord" Multiplicity="1" />
+          <End Role="PurchaseLetter" Type="ArcadeModel.PurchaseLetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LandLord">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseLetter">
+              <PropertyRef Name="SellerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lease_PersonalInfo">
+          <End Role="PersonalInfo" Type="ArcadeModel.PersonalInfo" Multiplicity="1" />
+          <End Role="Lease" Type="ArcadeModel.Lease" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lease">
+              <PropertyRef Name="TanentPersonalInfo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PurchaseLetter_PersonalInfo">
+          <End Role="PersonalInfo" Type="ArcadeModel.PersonalInfo" Multiplicity="1" />
+          <End Role="PurchaseLetter" Type="ArcadeModel.PurchaseLetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseLetter">
+              <PropertyRef Name="CostumerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Role_PersonInfo">
+          <End Role="PersonalInfo" Type="ArcadeModel.PersonalInfo" Multiplicity="1" />
+          <End Role="Role" Type="ArcadeModel.Role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalInfo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Role">
+              <PropertyRef Name="PersonalInfoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ArcadeModelStoreContainer" CdmEntityContainer="ArcadeEntities">
+          <EntitySetMapping Name="Bases">
+            <EntityTypeMapping TypeName="ArcadeModel.Basis">
+              <MappingFragment StoreEntitySet="Basis">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="ArcadeModel.Event">
+              <MappingFragment StoreEntitySet="Event">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="EstateIds" ColumnName="EstateIds" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InPuts">
+            <EntityTypeMapping TypeName="ArcadeModel.InPut">
+              <MappingFragment StoreEntitySet="InPut">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EstateId" ColumnName="EstateId" />
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OutPuts">
+            <EntityTypeMapping TypeName="ArcadeModel.OutPut">
+              <MappingFragment StoreEntitySet="OutPut">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EstateTypes">
+            <EntityTypeMapping TypeName="ArcadeModel.EstateType">
+              <MappingFragment StoreEntitySet="EstateType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="ArcadeModel.Job">
+              <MappingFragment StoreEntitySet="Job">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MaritalStatus">
+            <EntityTypeMapping TypeName="ArcadeModel.MaritalStatu">
+              <MappingFragment StoreEntitySet="MaritalStatus">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MilitaryStatus">
+            <EntityTypeMapping TypeName="ArcadeModel.MilitaryStatu">
+              <MappingFragment StoreEntitySet="MilitaryStatus">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentTypes">
+            <EntityTypeMapping TypeName="ArcadeModel.PaymentType">
+              <MappingFragment StoreEntitySet="PaymentType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleTypes">
+            <EntityTypeMapping TypeName="ArcadeModel.RoleType">
+              <MappingFragment StoreEntitySet="RoleType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ArcadeModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERs">
+            <EntityTypeMapping TypeName="ArcadeModel.USER">
+              <MappingFragment StoreEntitySet="USER">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Checks">
+            <EntityTypeMapping TypeName="ArcadeModel.Check">
+              <MappingFragment StoreEntitySet="Check">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="ForWhom" ColumnName="ForWhom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Constractions">
+            <EntityTypeMapping TypeName="ArcadeModel.Constraction">
+              <MappingFragment StoreEntitySet="Constraction">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+                <ScalarProperty Name="EstateId" ColumnName="EstateId" />
+                <ScalarProperty Name="ConstractorName" ColumnName="ConstractorName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoordinatingCouncils">
+            <EntityTypeMapping TypeName="ArcadeModel.CoordinatingCouncil">
+              <MappingFragment StoreEntitySet="CoordinatingCouncil">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="MembershipDate" ColumnName="MembershipDate" />
+                <ScalarProperty Name="NationalCode" ColumnName="NationalCode" />
+                <ScalarProperty Name="QuitDate" ColumnName="QuitDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estates">
+            <EntityTypeMapping TypeName="ArcadeModel.Estate">
+              <MappingFragment StoreEntitySet="Estate">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Facilities" ColumnName="Facilities" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="EstateTypeId" ColumnName="EstateTypeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LandLords">
+            <EntityTypeMapping TypeName="ArcadeModel.LandLord">
+              <MappingFragment StoreEntitySet="LandLord">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PersonalInfoId" ColumnName="PersonalInfoId" />
+                <ScalarProperty Name="Share" ColumnName="Share" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="EstateId" ColumnName="EstateId" />
+                <ScalarProperty Name="IsLandLord" ColumnName="IsLandLord" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Leases">
+            <EntityTypeMapping TypeName="ArcadeModel.Lease">
+              <MappingFragment StoreEntitySet="Lease">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LandLordId" ColumnName="LandLordId" />
+                <ScalarProperty Name="TanentPersonalInfo" ColumnName="TanentPersonalInfo" />
+                <ScalarProperty Name="Leasehold" ColumnName="Leasehold" />
+                <ScalarProperty Name="LeaseMounth" ColumnName="LeaseMounth" />
+                <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+                <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+                <ScalarProperty Name="Charge" ColumnName="Charge" />
+                <ScalarProperty Name="LateCharge" ColumnName="LateCharge" />
+                <ScalarProperty Name="CouncilId" ColumnName="CouncilId" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+                <ScalarProperty Name="Prepayment" ColumnName="Prepayment" />
+                <ScalarProperty Name="Witness" ColumnName="Witness" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="AmountInWords" ColumnName="AmountInWords" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonalInfoes">
+            <EntityTypeMapping TypeName="ArcadeModel.PersonalInfo">
+              <MappingFragment StoreEntitySet="PersonalInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="NationalCode" ColumnName="NationalCode" />
+                <ScalarProperty Name="Cetificate" ColumnName="Cetificate" />
+                <ScalarProperty Name="IssuancePlace" ColumnName="IssuancePlace" />
+                <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="IsMale" ColumnName="IsMale" />
+                <ScalarProperty Name="MaritalStatuseId" ColumnName="MaritalStatuseId" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="MilitaryStatuseId" ColumnName="MilitaryStatuseId" />
+                <ScalarProperty Name="JobAddress" ColumnName="JobAddress" />
+                <ScalarProperty Name="JobPhone" ColumnName="JobPhone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+                <ScalarProperty Name="CompanyPhone" ColumnName="CompanyPhone" />
+                <ScalarProperty Name="IsLegal" ColumnName="IsLegal" />
+                <ScalarProperty Name="ZipeCode" ColumnName="ZipeCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseLetters">
+            <EntityTypeMapping TypeName="ArcadeModel.PurchaseLetter">
+              <MappingFragment StoreEntitySet="PurchaseLetter">
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="Transmiter" ColumnName="Transmiter" />
+                <ScalarProperty Name="ContarctDate" ColumnName="ContarctDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SellerId" ColumnName="SellerId" />
+                <ScalarProperty Name="CostumerId" ColumnName="CostumerId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="CouncilId" ColumnName="CouncilId" />
+                <ScalarProperty Name="Prepayment" ColumnName="Prepayment" />
+                <ScalarProperty Name="TransforRedress" ColumnName="TransforRedress" />
+                <ScalarProperty Name="CommitmentRedress" ColumnName="CommitmentRedress" />
+                <ScalarProperty Name="WitnessName1" ColumnName="WitnessName1" />
+                <ScalarProperty Name="WitnessName2" ColumnName="WitnessName2" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="CheckNumbers" ColumnName="CheckNumbers" />
+                <ScalarProperty Name="AmountInWords" ColumnName="AmountInWords" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RentPayments">
+            <EntityTypeMapping TypeName="ArcadeModel.RentPayment">
+              <MappingFragment StoreEntitySet="RentPayment">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LeaseId" ColumnName="LeaseId" />
+                <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+                <ScalarProperty Name="NextDate" ColumnName="NextDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="ArcadeModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleTypeId" ColumnName="RoleTypeId" />
+                <ScalarProperty Name="PersonalInfoId" ColumnName="PersonalInfoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
